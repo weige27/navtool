@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://navtool.cc/sitemap.xml 
