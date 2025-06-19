@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchBtn = document.getElementById('search-btn');
     const cards = document.querySelectorAll('.card');
     
+    // 修复卡片结构，确保整个卡片可点击
+    fixCardStructure();
+    
     // 语言切换功能
     langZh.addEventListener('click', function() {
         body.classList.remove('en-mode');
@@ -26,6 +29,41 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.add('en-mode');
         langEn.classList.add('active');
         langZh.classList.remove('active');
+    }
+    
+    // 修复所有卡片的HTML结构，使整个卡片可点击
+    function fixCardStructure() {
+        document.querySelectorAll('.card').forEach(card => {
+            const h3 = card.querySelector('h3');
+            const a = card.querySelector('a');
+            
+            // 如果h3在a标签外面，需要移动它
+            if (h3 && a && h3.parentNode === card) {
+                // 获取链接信息
+                const href = a.getAttribute('href');
+                const target = a.getAttribute('target') || '_blank';
+                const cardContent = a.cloneNode(true);
+                
+                // 创建新的a标签
+                const newA = document.createElement('a');
+                newA.setAttribute('href', href);
+                newA.setAttribute('target', target);
+                
+                // 将h3移入a标签
+                newA.appendChild(h3);
+                
+                // 如果是cardContent，则将它的内容移到新的a标签中
+                if (cardContent.querySelector('.card-content')) {
+                    newA.appendChild(cardContent.querySelector('.card-content'));
+                }
+                
+                // 清空卡片内容
+                card.innerHTML = '';
+                
+                // 将新的a标签添加到卡片中
+                card.appendChild(newA);
+            }
+        });
     }
     
     // 搜索功能
