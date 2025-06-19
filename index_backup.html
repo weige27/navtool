@@ -1,15 +1,85 @@
- 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavTool - 开发者工具导航 | Developer Tools Navigation</title>
+    <meta name="description" content="NavTool提供精选AI开发工具、SEO资源、数据分析和开发模板，为开发者提供一站式导航服务 | Curated developer tools, AI resources and templates for coders">
+    <meta name="keywords" content="AI工具, 开发者导航, SEO工具, 开发模版, 网站资源, AI tools, developer navigation, SEO tools, development templates">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://navtool.cc/">
+    <meta property="og:title" content="NavTool - 开发者工具导航">
+    <meta property="og:description" content="NavTool提供精选AI开发工具、SEO资源、数据分析和开发模板，为开发者提供一站式导航服务">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=NavTool">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://navtool.cc/">
+    <meta property="twitter:title" content="NavTool - 开发者工具导航">
+    <meta property="twitter:description" content="NavTool提供精选AI开发工具、SEO资源、数据分析和开发模板，为开发者提供一站式导航服务">
+    <meta property="twitter:image" content="https://via.placeholder.com/1200x630?text=NavTool">
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- 网站图标 -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- 规范链接 -->
+    <link rel="canonical" href="https://navtool.cc/" />
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R8Y819ZXPM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-R8Y819ZXPM');
+    </script>
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "NavTool",
+      "url": "https://navtool.cc/",
+      "description": "NavTool提供精选AI开发工具、SEO资源、数据分析和开发模板，为开发者提供一站式导航服务",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://navtool.cc/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>开发者导航<span>Dev Navigator</span></h1>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="搜索工具和资源... | Search tools and resources...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+                <div id="search-count" style="display:none;"></div>
+            </div>
+            <div class="language-toggle">
+                <button id="lang-zh" class="active">中文</button>
+                <button id="lang-en">English</button>
+            </div>
+        </div>
+    </header>
+
     <main class="container">
-        <!-- 需求收集和关键词调研部�?-->
+        <!-- 需求收集和关键词调研部分 -->
         <section class="section" id="keyword-research">
-            <h2><i class="fas fa-search"></i> 需求收集与关键词调�?| Requirements & Keyword Research</h2>
+            <h2><i class="fas fa-search"></i> 需求收集与关键词调研 | Requirements & Keyword Research</h2>
             <div class="card-container">
                 <div class="card">
-                    <h3>Google关键词工�?| Google Keyword Tool</h3>
+                    <h3>Google关键词工具 | Google Keyword Tool</h3>
                     <a href="https://www.searchsuggest.tips/?keyword=" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
-                                <img src="https://via.placeholder.com/80x60?text=Keywords" alt="关键词搜�?>
+                                <img src="https://via.placeholder.com/80x60?text=Keywords" alt="关键词搜索">
                             </div>
                             <p><span class="zh">Google搜索提示工具，帮助发现相关关键词</span><span class="en">Google search suggestions tool to discover related keywords</span></p>
                         </div>
@@ -17,7 +87,7 @@
                 </div>
 
                 <div class="card">
-                    <h3>Toolify 检�?| Toolify Search</h3>
+                    <h3>Toolify 检索 | Toolify Search</h3>
                     <a href="https://www.toolify.ai/Best-AI-Tools-revenue" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
@@ -29,25 +99,25 @@
                 </div>
 
                 <div class="card">
-                    <h3>AI 导航站需求列�?| AI Nav Request List</h3>
+                    <h3>AI 导航站需求列表 | AI Nav Request List</h3>
                     <a href="https://theresanaiforthat.com/requests" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
-                                <img src="https://via.placeholder.com/80x60?text=Requests" alt="AI需求列�?>
+                                <img src="https://via.placeholder.com/80x60?text=Requests" alt="AI需求列表">
                             </div>
-                            <p><span class="zh">了解用户正在寻找的AI工具和功�?/span><span class="en">Discover what AI tools and features users are looking for</span></p>
+                            <p><span class="zh">了解用户正在寻找的AI工具和功能</span><span class="en">Discover what AI tools and features users are looking for</span></p>
                         </div>
                     </a>
                 </div>
 
                 <div class="card">
-                    <h3>关键词难度分�?| Keyword Difficulty Analysis</h3>
+                    <h3>关键词难度分析 | Keyword Difficulty Analysis</h3>
                     <a href="https://ahrefs.com/keyword-difficulty" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=SEO" alt="关键词难度检查器">
                             </div>
-                            <p><span class="zh">分析关键词的竞争难度，选择最佳定�?/span><span class="en">Analyze keyword competition difficulty for optimal positioning</span></p>
+                            <p><span class="zh">分析关键词的竞争难度，选择最佳定位</span><span class="en">Analyze keyword competition difficulty for optimal positioning</span></p>
                         </div>
                     </a>
                 </div>
@@ -90,7 +160,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Instant" alt="域名查询">
                             </div>
-                            <p><span class="zh">即时域名可用性检�?/span><span class="en">Instant domain availability check</span></p>
+                            <p><span class="zh">即时域名可用性检查</span><span class="en">Instant domain availability check</span></p>
                         </div>
                     </a>
                 </div>
@@ -103,7 +173,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Spaceship" alt="域名注册">
                             </div>
-                            <p><span class="zh">域名注册与管理服�?/span><span class="en">Domain registration and management service</span></p>
+                            <p><span class="zh">域名注册与管理服务</span><span class="en">Domain registration and management service</span></p>
                         </div>
                     </a>
                 </div>
@@ -115,7 +185,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Porkbun" alt="域名注册">
                             </div>
-                            <p><span class="zh">经济实惠的域名注册服�?/span><span class="en">Affordable domain registration service</span></p>
+                            <p><span class="zh">经济实惠的域名注册服务</span><span class="en">Affordable domain registration service</span></p>
                         </div>
                     </a>
                 </div>
@@ -127,7 +197,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Namecheap" alt="域名注册">
                             </div>
-                            <p><span class="zh">可靠的域名注册服�?/span><span class="en">Reliable domain registration service</span></p>
+                            <p><span class="zh">可靠的域名注册服务</span><span class="en">Reliable domain registration service</span></p>
                         </div>
                     </a>
                 </div>
@@ -140,7 +210,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=GitHub" alt="GitHub">
                             </div>
-                            <p><span class="zh">代码托管与版本控制平�?/span><span class="en">Code hosting and version control platform</span></p>
+                            <p><span class="zh">代码托管与版本控制平台</span><span class="en">Code hosting and version control platform</span></p>
                         </div>
                     </a>
                 </div>
@@ -164,20 +234,20 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Vercel" alt="Vercel">
                             </div>
-                            <p><span class="zh">前端应用托管与部署平�?/span><span class="en">Frontend application hosting and deployment platform</span></p>
+                            <p><span class="zh">前端应用托管与部署平台</span><span class="en">Frontend application hosting and deployment platform</span></p>
                         </div>
                     </a>
                 </div>
                 
                 <!-- 数据后台 -->
                 <div class="card">
-                    <h3>Search Console | 搜索控制�?/h3>
+                    <h3>Search Console | 搜索控制台</h3>
                     <a href="https://search.google.com/search-console" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Search" alt="Google Search Console">
                             </div>
-                            <p><span class="zh">Google搜索性能与索引监控工�?/span><span class="en">Google search performance and indexing monitoring tool</span></p>
+                            <p><span class="zh">Google搜索性能与索引监控工具</span><span class="en">Google search performance and indexing monitoring tool</span></p>
                         </div>
                     </a>
                 </div>
@@ -213,13 +283,13 @@
             <h2><i class="fas fa-robot"></i> 善用黑科技工具 | Advanced AI Tools</h2>
             <div class="card-container">
                 <div class="card">
-                    <h3>bolt.new | Next.js快速创�?/h3>
+                    <h3>bolt.new | Next.js快速创建</h3>
                     <a href="https://bolt.new" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=bolt.new" alt="bolt.new">
                             </div>
-                            <p><span class="zh">一键创建和部署Next.js项目的工�?/span><span class="en">One-click tool to create and deploy Next.js projects</span></p>
+                            <p><span class="zh">一键创建和部署Next.js项目的工具</span><span class="en">One-click tool to create and deploy Next.js projects</span></p>
                         </div>
                     </a>
                 </div>
@@ -231,19 +301,19 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Cursor" alt="Cursor">
                             </div>
-                            <p><span class="zh">内置AI的代码编辑器，精雕细琢的开发体�?/span><span class="en">AI-powered code editor for refined development experience</span></p>
+                            <p><span class="zh">内置AI的代码编辑器，精雕细琢的开发体验</span><span class="en">AI-powered code editor for refined development experience</span></p>
                         </div>
                     </a>
                 </div>
 
                 <div class="card">
-                    <h3>same.new | 复制与变�?/h3>
+                    <h3>same.new | 复制与变化</h3>
                     <a href="https://same.new" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=same.new" alt="same.new">
                             </div>
-                            <p><span class="zh">快速复制修改已有网站和应用的工�?/span><span class="en">Tool for rapidly copying and modifying existing websites and apps</span></p>
+                            <p><span class="zh">快速复制修改已有网站和应用的工具</span><span class="en">Tool for rapidly copying and modifying existing websites and apps</span></p>
                         </div>
                     </a>
                 </div>
@@ -255,7 +325,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Claude" alt="Claude">
                             </div>
-                            <p><span class="zh">Anthropic推出的强大AI助手，可用于编程与创�?/span><span class="en">Powerful AI assistant by Anthropic for programming and creation</span></p>
+                            <p><span class="zh">Anthropic推出的强大AI助手，可用于编程与创作</span><span class="en">Powerful AI assistant by Anthropic for programming and creation</span></p>
                         </div>
                     </a>
                 </div>
@@ -279,7 +349,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=V0" alt="V0.dev">
                             </div>
-                            <p><span class="zh">通过文本描述生成React组件和网页界�?/span><span class="en">Generate React components and web interfaces from text descriptions</span></p>
+                            <p><span class="zh">通过文本描述生成React组件和网页界面</span><span class="en">Generate React components and web interfaces from text descriptions</span></p>
                         </div>
                     </a>
                 </div>
@@ -297,7 +367,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=AITDK" alt="AITDK">
                             </div>
-                            <p><span class="zh">AI网站流量和竞争对手分�?/span><span class="en">AI website traffic and competitor analysis</span></p>
+                            <p><span class="zh">AI网站流量和竞争对手分析</span><span class="en">AI website traffic and competitor analysis</span></p>
                         </div>
                     </a>
                 </div>
@@ -333,13 +403,13 @@
             <h2><i class="fas fa-palette"></i> 上站模板 | Website Templates</h2>
             <div class="card-container">
                 <div class="card">
-                    <h3>Dynamic Blog on Cloudflare | 动态博�?/h3>
+                    <h3>Dynamic Blog on Cloudflare | 动态博客</h3>
                     <a href="https://github.com/openRin/Rin" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
-                                <img src="https://via.placeholder.com/80x60?text=Rin" alt="Cloudflare动态博�?>
+                                <img src="https://via.placeholder.com/80x60?text=Rin" alt="Cloudflare动态博客">
                             </div>
-                            <p><span class="zh">基于Cloudflare Pages + Workers + D1 + R2的动态博�?/span><span class="en">Dynamic blog based on Cloudflare Pages + Workers + D1 + R2</span></p>
+                            <p><span class="zh">基于Cloudflare Pages + Workers + D1 + R2的动态博客</span><span class="en">Dynamic blog based on Cloudflare Pages + Workers + D1 + R2</span></p>
                         </div>
                     </a>
                 </div>
@@ -375,19 +445,19 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Astro" alt="Astro模板">
                             </div>
-                            <p><span class="zh">响应式博客与作品集展示模�?/span><span class="en">Responsive blog and portfolio template with Astro</span></p>
+                            <p><span class="zh">响应式博客与作品集展示模版</span><span class="en">Responsive blog and portfolio template with Astro</span></p>
                         </div>
                     </a>
                 </div>
                 
                 <div class="card">
-                    <h3>Free NextJS Landing Page | 落地页模�?/h3>
+                    <h3>Free NextJS Landing Page | 落地页模版</h3>
                     <a href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
-                                <img src="https://via.placeholder.com/80x60?text=Landing" alt="Next.js落地�?>
+                                <img src="https://via.placeholder.com/80x60?text=Landing" alt="Next.js落地页">
                             </div>
-                            <p><span class="zh">免费Next.js落地页模�?/span><span class="en">Free NextJS Landing Page Template</span></p>
+                            <p><span class="zh">免费Next.js落地页模版</span><span class="en">Free NextJS Landing Page Template</span></p>
                         </div>
                     </a>
                 </div>
@@ -405,7 +475,7 @@
                 </div>
                 
                 <div class="card">
-                    <h3>Viggle AI WebUI | AI网页客户�?/h3>
+                    <h3>Viggle AI WebUI | AI网页客户端</h3>
                     <a href="https://github.com/ai-aigc-studio/Viggle-AI-WebUI" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
@@ -417,7 +487,7 @@
                 </div>
                 
                 <div class="card">
-                    <h3>New Blog | 新博客模�?/h3>
+                    <h3>New Blog | 新博客模版</h3>
                     <a href="https://github.com/weijunext/new-blog" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
@@ -483,7 +553,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Hairstyle" alt="AI发型">
                             </div>
-                            <p><span class="zh">几秒钟内生成新发�?/span><span class="en">Get a new hairstyle in seconds</span></p>
+                            <p><span class="zh">几秒钟内生成新发型</span><span class="en">Get a new hairstyle in seconds</span></p>
                         </div>
                     </a>
                 </div>
@@ -495,7 +565,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Green" alt="绿幕生成">
                             </div>
-                            <p><span class="zh">在视频中跟踪对象并添加绿色背�?/span><span class="en">Track an object in a video and add a green screen</span></p>
+                            <p><span class="zh">在视频中跟踪对象并添加绿色背景</span><span class="en">Track an object in a video and add a green screen</span></p>
                         </div>
                     </a>
                 </div>
@@ -562,12 +632,12 @@
             </div>
         </section>
 
-        <!-- 导航站模�?-->
+        <!-- 导航站模版 -->
         <section class="section" id="navigation-templates">
-            <h2><i class="fas fa-compass"></i> 导航站模�?| Navigation Templates</h2>
+            <h2><i class="fas fa-compass"></i> 导航站模版 | Navigation Templates</h2>
             <div class="card-container">
                 <div class="card">
-                    <h3>FRE123导航 | 导航站模�?/h3>
+                    <h3>FRE123导航 | 导航站模版</h3>
                     <a href="https://github.com/fre123-com/fre123-nav" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
@@ -591,7 +661,7 @@
                 </div>
                 
                 <div class="card">
-                    <h3>WebStack导航 | 静态导�?/h3>
+                    <h3>WebStack导航 | 静态导航</h3>
                     <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
@@ -657,7 +727,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=DokeyAI" alt="DokeyAI">
                             </div>
-                            <p><span class="zh">AI工具收集与展示平�?/span><span class="en">AI tools collection and showcase platform</span></p>
+                            <p><span class="zh">AI工具收集与展示平台</span><span class="en">AI tools collection and showcase platform</span></p>
                         </div>
                     </a>
                 </div>
@@ -669,19 +739,19 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Vercel" alt="Vercel Templates">
                             </div>
-                            <p><span class="zh">Vercel模板中心，众多高价值的可复用模�?/span><span class="en">Vercel template center with many valuable reusable templates</span></p>
+                            <p><span class="zh">Vercel模板中心，众多高价值的可复用模版</span><span class="en">Vercel template center with many valuable reusable templates</span></p>
                         </div>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- 关键词工�?-->
+        <!-- 关键词工具 -->
         <section class="section" id="keyword-tools">
-            <h2><i class="fas fa-key"></i> 关键词工�?| Keyword Tools</h2>
+            <h2><i class="fas fa-key"></i> 关键词工具 | Keyword Tools</h2>
             <div class="card-container">
                 <div class="card">
-                    <h3>Semrush | SEO关键词研�?/h3>
+                    <h3>Semrush | SEO关键词研究</h3>
                     <a href="https://www.semrush.com/" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
@@ -729,7 +799,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=GA" alt="Google Analytics">
                             </div>
-                            <p><span class="zh">网站流量分析和用户行为追踪工�?/span><span class="en">Website traffic analysis and user behavior tracking tool</span></p>
+                            <p><span class="zh">网站流量分析和用户行为追踪工具</span><span class="en">Website traffic analysis and user behavior tracking tool</span></p>
                         </div>
                     </a>
                 </div>
@@ -753,7 +823,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Trends" alt="Google Trends">
                             </div>
-                            <p><span class="zh">查看关键词和话题的搜索趋�?/span><span class="en">View search trends for keywords and topics</span></p>
+                            <p><span class="zh">查看关键词和话题的搜索趋势</span><span class="en">View search trends for keywords and topics</span></p>
                         </div>
                     </a>
                 </div>
@@ -783,7 +853,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=AdSense" alt="Google AdSense">
                             </div>
-                            <p><span class="zh">Google的广告服务，在网站展示广告赚取收�?/span><span class="en">Google's ad service for earning revenue through website ads</span></p>
+                            <p><span class="zh">Google的广告服务，在网站展示广告赚取收入</span><span class="en">Google's ad service for earning revenue through website ads</span></p>
                         </div>
                     </a>
                 </div>
@@ -795,7 +865,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Adsterra" alt="Adsterra">
                             </div>
-                            <p><span class="zh">提供各种广告格式的广告网�?/span><span class="en">Ad network offering various ad formats</span></p>
+                            <p><span class="zh">提供各种广告格式的广告网络</span><span class="en">Ad network offering various ad formats</span></p>
                         </div>
                     </a>
                 </div>
@@ -807,7 +877,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Monetag" alt="Monetag">
                             </div>
-                            <p><span class="zh">提供广告和电子商务变现解决方�?/span><span class="en">Provides advertising and e-commerce monetization solutions</span></p>
+                            <p><span class="zh">提供广告和电子商务变现解决方案</span><span class="en">Provides advertising and e-commerce monetization solutions</span></p>
                         </div>
                     </a>
                 </div>
@@ -819,7 +889,7 @@
             <h2><i class="fas fa-hand-holding-usd"></i> 赞赏工具 | Donation Tools</h2>
             <div class="card-container">
                 <div class="card">
-                    <h3>Ko-fi | 创作者打�?/h3>
+                    <h3>Ko-fi | 创作者打赏</h3>
                     <a href="https://ko-fi.com/" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
@@ -831,19 +901,19 @@
                 </div>
                 
                 <div class="card">
-                    <h3>Buy Me a Coffee | 创作者打�?/h3>
+                    <h3>Buy Me a Coffee | 创作者打赏</h3>
                     <a href="https://www.buymeacoffee.com/" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Coffee" alt="Buy Me a Coffee">
                             </div>
-                            <p><span class="zh">为创作者提供简易打赏功�?/span><span class="en">Provides simple tipping functionality for creators</span></p>
+                            <p><span class="zh">为创作者提供简易打赏功能</span><span class="en">Provides simple tipping functionality for creators</span></p>
                         </div>
                     </a>
                 </div>
 
                 <div class="card">
-                    <h3>Gumroad | 数字产品销�?/h3>
+                    <h3>Gumroad | 数字产品销售</h3>
                     <a href="https://gumroad.com/" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
@@ -879,7 +949,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Stripe" alt="Stripe">
                             </div>
-                            <p><span class="zh">广泛使用的在线支付处理平�?/span><span class="en">Widely used online payment processing platform</span></p>
+                            <p><span class="zh">广泛使用的在线支付处理平台</span><span class="en">Widely used online payment processing platform</span></p>
                         </div>
                     </a>
                 </div>
@@ -903,7 +973,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Creem" alt="Creem">
                             </div>
-                            <p><span class="zh">为创作者提供的支付和订阅管理工�?/span><span class="en">Payment and subscription management tools for creators</span></p>
+                            <p><span class="zh">为创作者提供的支付和订阅管理工具</span><span class="en">Payment and subscription management tools for creators</span></p>
                         </div>
                     </a>
                 </div>
@@ -921,19 +991,19 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Clarity" alt="Microsoft Clarity">
                             </div>
-                            <p><span class="zh">提供用户行为分析，帮助优化网站用户体�?/span><span class="en">Provides user behavior analysis to optimize website UX</span></p>
+                            <p><span class="zh">提供用户行为分析，帮助优化网站用户体验</span><span class="en">Provides user behavior analysis to optimize website UX</span></p>
                         </div>
                     </a>
                 </div>
 
                 <div class="card">
-                    <h3>Plausible | 简易分析工�?/h3>
+                    <h3>Plausible | 简易分析工具</h3>
                     <a href="https://plausible.io/" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Plausible" alt="Plausible">
                             </div>
-                            <p><span class="zh">简单易用的网页分析工具，注重隐�?/span><span class="en">Simple web analytics tool with privacy focus</span></p>
+                            <p><span class="zh">简单易用的网页分析工具，注重隐私</span><span class="en">Simple web analytics tool with privacy focus</span></p>
                         </div>
                     </a>
                 </div>
@@ -942,7 +1012,7 @@
 
         <!-- 资讯部分 -->
         <section class="section" id="news">
-            <h2><i class="fas fa-newspaper"></i> 开发者资�?| Developer News</h2>
+            <h2><i class="fas fa-newspaper"></i> 开发者资讯 | Developer News</h2>
             <div class="card-container">
                 <div class="card">
                     <h3>SEO基础知识 | SEO Basics</h3>
@@ -963,19 +1033,19 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Trending" alt="热门网站">
                             </div>
-                            <p><span class="zh">发现当前最热门的网站趋�?/span><span class="en">Discover currently trending websites</span></p>
+                            <p><span class="zh">发现当前最热门的网站趋势</span><span class="en">Discover currently trending websites</span></p>
                         </div>
                     </a>
                 </div>
 
                 <div class="card">
-                    <h3>Reddit开发社�?| Reddit Dev Community</h3>
+                    <h3>Reddit开发社区 | Reddit Dev Community</h3>
                     <a href="https://liberating-doll-b8a.notion.site/Reddit-1a8e8aed91b18021839ecba8b74e530b" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Reddit" alt="Reddit社区">
                             </div>
-                            <p><span class="zh">Reddit网站开发社区资源汇�?/span><span class="en">Reddit web development community resources</span></p>
+                            <p><span class="zh">Reddit网站开发社区资源汇总</span><span class="en">Reddit web development community resources</span></p>
                         </div>
                     </a>
                 </div>
@@ -999,7 +1069,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=Report" alt="创业报告">
                             </div>
-                            <p><span class="zh">独立创业者高级报�?.0</span><span class="en">Starter Story Premium Solopreneur Report 2.0</span></p>
+                            <p><span class="zh">独立创业者高级报告2.0</span><span class="en">Starter Story Premium Solopreneur Report 2.0</span></p>
                         </div>
                     </a>
                 </div>
@@ -1023,7 +1093,7 @@
                             <div class="card-image">
                                 <img src="https://via.placeholder.com/80x60?text=HN" alt="HN讨论">
                             </div>
-                            <p><span class="zh">HN: 2024年月�?500副业项目展示</span><span class="en">Ask HN: Those making $500/month on side projects in 2024</span></p>
+                            <p><span class="zh">HN: 2024年月入$500副业项目展示</span><span class="en">Ask HN: Those making $500/month on side projects in 2024</span></p>
                         </div>
                     </a>
                 </div>
@@ -1033,16 +1103,16 @@
             </div>
         </section>
 
-        <!-- 生财精华�?-->
+        <!-- 生财精华帖 -->
         <section class="section" id="finance-posts">
-            <h2><i class="fas fa-money-bill-wave"></i> 生财精华�?| Top Financial Insights</h2>
+            <h2><i class="fas fa-money-bill-wave"></i> 生财精华帖 | Top Financial Insights</h2>
             <div class="card-container">
                 <div class="card">
-                    <h3>独立开发者经�?| Indie Dev Experience</h3>
+                    <h3>独立开发者经验 | Indie Dev Experience</h3>
                     <a href="https://scys.com/articleDetail/xq_topic/1525814845844482" target="_blank">
                         <div class="card-content">
                             <div class="card-timestamp">2025/3/1</div>
-                            <p><span class="zh">不要轻易说自己为独立开发�?/span><span class="en">Don't easily call yourself an indie developer</span></p>
+                            <p><span class="zh">不要轻易说自己为独立开发者</span><span class="en">Don't easily call yourself an indie developer</span></p>
                         </div>
                     </a>
                 </div>
@@ -1058,7 +1128,7 @@
                 </div>
                 
                 <div class="card">
-                    <h3>快速开发指�?| Rapid Development Guide</h3>
+                    <h3>快速开发指南 | Rapid Development Guide</h3>
                     <a href="https://scys.com/articleDetail/xq_topic/4848511545851418" target="_blank">
                         <div class="card-content">
                             <div class="card-timestamp">2024-11-13</div>
@@ -1068,7 +1138,7 @@
                 </div>
 
                 <div class="card">
-                    <h3>开发日常实�?| Daily Dev Practice</h3>
+                    <h3>开发日常实践 | Daily Dev Practice</h3>
                     <a href="https://scys.com/articleDetail/xq_topic/5121548228815414" target="_blank">
                         <div class="card-content">
                             <div class="card-timestamp">2024-11-05</div>
@@ -1088,11 +1158,11 @@
                 </div>
                 
                 <div class="card">
-                    <h3>AI开发工�?| AI Dev Tools</h3>
+                    <h3>AI开发工具 | AI Dev Tools</h3>
                     <a href="https://scys.com/articleDetail/xq_topic/188545124485142" target="_blank">
                         <div class="card-content">
                             <div class="card-image">
-                                <img src="https://via.placeholder.com/80x60?text=AI+Tools" alt="AI开发工�?>
+                                <img src="https://via.placeholder.com/80x60?text=AI+Tools" alt="AI开发工具">
                             </div>
                             <p><span class="zh">善用黑科技工具，做十倍速全栈程序员</span><span class="en">Luxurious tech tools for 10x full-stack developers</span></p>
                         </div>
@@ -1114,13 +1184,13 @@
                     <a href="https://scys.com/articleDetail/xq_topic/814822455488822" target="_blank">
                         <div class="card-content">
                             <div class="card-timestamp">2023-02-09</div>
-                            <p><span class="zh">写给独立开发者：如何快速做出产�?MVP</span><span class="en">For indie devs: How to quickly develop an MVP product</span></p>
+                            <p><span class="zh">写给独立开发者：如何快速做出产品 MVP</span><span class="en">For indie devs: How to quickly develop an MVP product</span></p>
                         </div>
                     </a>
                 </div>
 
                 <div class="card">
-                    <h3>产品Idea筛�?| Product Idea Selection</h3>
+                    <h3>产品Idea筛选 | Product Idea Selection</h3>
                     <a href="https://scys.com/articleDetail/xq_topic/212485241245121" target="_blank">
                         <div class="card-content">
                             <div class="card-timestamp">2022-11-10</div>
@@ -1134,13 +1204,13 @@
                     <a href="https://scys.com/articleDetail/xq_topic/415414825512158" target="_blank">
                         <div class="card-content">
                             <div class="card-timestamp">2022-05-11</div>
-                            <p><span class="zh">完美的创业项目，是怎么被想出来�?/span><span class="en">How are perfect startup projects conceived?</span></p>
+                            <p><span class="zh">完美的创业项目，是怎么被想出来的</span><span class="en">How are perfect startup projects conceived?</span></p>
                         </div>
                     </a>
                 </div>
 
                 <div class="card">
-                    <h3>产品方法�?| Product Methodology</h3>
+                    <h3>产品方法论 | Product Methodology</h3>
                     <a href="https://scys.com/articleDetail/xq_topic/184214255522812" target="_blank">
                         <div class="card-content">
                             <div class="card-timestamp">2022-04-25</div>
@@ -1150,11 +1220,11 @@
                 </div>
                 
                 <div class="card">
-                    <h3>SEO优化技�?| SEO Optimization Tips</h3>
+                    <h3>SEO优化技巧 | SEO Optimization Tips</h3>
                     <a href="https://scys.com/articleDetail/xq_topic/218514241452421" target="_blank">
                         <div class="card-content">
                             <div class="card-timestamp">2021-09-10</div>
-                            <p><span class="zh">2021 �?Google SEO 最关键有效的技�?站内</span><span class="en">8 most effective Google SEO techniques in 2021</span></p>
+                            <p><span class="zh">2021 年 Google SEO 最关键有效的技巧 站内</span><span class="en">8 most effective Google SEO techniques in 2021</span></p>
                         </div>
                     </a>
                 </div>
@@ -1164,7 +1234,7 @@
                     <a href="https://scys.com/articleDetail/xq_topic/182888851425182" target="_blank">
                         <div class="card-content">
                             <div class="card-timestamp">2021-06-21</div>
-                            <p><span class="zh">0 资源，做�?3 个日 UV 过千万，7-8 个日 UV 过万的网站，分享我踩无数坑的经验分析</span><span class="en">From zero to millions: Growing websites to 10K+ daily UV</span></p>
+                            <p><span class="zh">0 资源，做出 3 个日 UV 过千万，7-8 个日 UV 过万的网站，分享我踩无数坑的经验分析</span><span class="en">From zero to millions: Growing websites to 10K+ daily UV</span></p>
                         </div>
                     </a>
                 </div>
@@ -1177,7 +1247,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 开发者导�?| Developer Navigation - 精选优质AI与开发工�?| Curated AI and Development Tools</p>
+            <p>&copy; 2025 NavTool.cc - 精选优质AI与开发工具 | Curated AI and Development Tools</p>
             <div class="social-links">
                 <a href="#"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -1198,4 +1268,50 @@
             langEn.classList.remove('active');
             localStorage.setItem('lang', 'zh');
         });
- 
+        
+        langEn.addEventListener('click', function() {
+            body.classList.add('en-mode');
+            langEn.classList.add('active');
+            langZh.classList.remove('active');
+            localStorage.setItem('lang', 'en');
+        });
+        
+        // Check saved language preference
+        if(localStorage.getItem('lang') === 'en') {
+            body.classList.add('en-mode');
+            langEn.classList.add('active');
+            langZh.classList.remove('active');
+        }
+        
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        const searchBtn = document.getElementById('search-btn');
+        const cards = document.querySelectorAll('.card');
+        
+        function performSearch() {
+            const searchTerm = searchInput.value.toLowerCase();
+            
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const desc = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || desc.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+        
+        searchBtn.addEventListener('click', performSearch);
+        searchInput.addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+    });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html> 
