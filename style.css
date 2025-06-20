@@ -11,6 +11,10 @@
     --hover-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --accent-color: #4a6cf7;
 }
 
 * {

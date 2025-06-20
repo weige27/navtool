@@ -32,9 +32,9 @@
     <!-- 规范链接 -->
     <link rel="canonical" href="https://navtool.cc/" />
     <!-- 网站地图引用 -->
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
     <!-- RSS Feed -->
-    <link rel="alternate" type="application/rss+xml" title="NavTool RSS Feed" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="NavTool RSS Feed" href="feed.xml" />
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R8Y819ZXPM"></script>
     <script>
@@ -1320,8 +1320,8 @@
                 <div class="footer-col">
                     <h4>链接 | Links</h4>
                     <ul>
-                        <li><a href="/feed.xml" target="_blank"><i class="fas fa-rss"></i> RSS订阅</a></li>
-                        <li><a href="/sitemap.xml" target="_blank"><i class="fas fa-sitemap"></i> 网站地图</a></li>
+                        <li><a href="feed.xml" target="_blank"><i class="fas fa-rss"></i> RSS订阅</a></li>
+                        <li><a href="sitemap.xml" target="_blank"><i class="fas fa-sitemap"></i> 网站地图</a></li>
                         <li><a href="#" id="back-to-top"><i class="fas fa-arrow-up"></i> 返回顶部</a></li>
                     </ul>
                 </div>
@@ -1340,62 +1340,7 @@
         </div>
     </footer>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const langZh = document.getElementById('lang-zh');
-        const langEn = document.getElementById('lang-en');
-        const body = document.body;
-        
-        langZh.addEventListener('click', function() {
-            body.classList.remove('en-mode');
-            langZh.classList.add('active');
-            langEn.classList.remove('active');
-            localStorage.setItem('lang', 'zh');
-        });
-        
-        langEn.addEventListener('click', function() {
-            body.classList.add('en-mode');
-            langEn.classList.add('active');
-            langZh.classList.remove('active');
-            localStorage.setItem('lang', 'en');
-        });
-        
-        // Check saved language preference
-        if(localStorage.getItem('lang') === 'en') {
-            body.classList.add('en-mode');
-            langEn.classList.add('active');
-            langZh.classList.remove('active');
-        }
-        
-        // Search functionality
-        const searchInput = document.getElementById('search-input');
-        const searchBtn = document.getElementById('search-btn');
-        const cards = document.querySelectorAll('.card');
-        
-        function performSearch() {
-            const searchTerm = searchInput.value.toLowerCase();
-            
-            cards.forEach(card => {
-                const title = card.querySelector('h3').textContent.toLowerCase();
-                const desc = card.querySelector('p').textContent.toLowerCase();
-                
-                if (title.includes(searchTerm) || desc.includes(searchTerm)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-        
-        searchBtn.addEventListener('click', performSearch);
-        searchInput.addEventListener('keyup', function(e) {
-            if (e.key === 'Enter') {
-                performSearch();
-            }
-        });
-    });
-    </script>
-
+    <!-- 移除冲突的内嵌JavaScript代码 -->
     <script src="script.js"></script>
 </body>
 </html> 
