@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('search-input');
     const searchBtn = document.getElementById('search-btn');
     const cards = document.querySelectorAll('.card');
+    const sections = document.querySelectorAll('.section');
     
     // 修复卡片结构，确保整个卡片可点击
     fixCardStructure();
@@ -31,103 +32,57 @@ document.addEventListener('DOMContentLoaded', function() {
         langZh.classList.remove('active');
     }
     
-    // 修复所有卡片的HTML结构，使整个卡片可点击
-    function fixCardStructure() {
-        document.querySelectorAll('.card').forEach(card => {
-            const h3 = card.querySelector('h3');
-            const a = card.querySelector('a');
-            
-            // 如果h3在a标签外面，需要移动它
-            if (h3 && a && h3.parentNode === card) {
-                // 获取链接信息
-                const href = a.getAttribute('href');
-                const target = a.getAttribute('target') || '_blank';
-                const cardContent = a.cloneNode(true);
-                
-                // 创建新的a标签
-                const newA = document.createElement('a');
-                newA.setAttribute('href', href);
-                newA.setAttribute('target', target);
-                
-                // 将h3移入a标签
-                newA.appendChild(h3);
-                
-                // 如果是cardContent，则将它的内容移到新的a标签中
-                if (cardContent.querySelector('.card-content')) {
-                    newA.appendChild(cardContent.querySelector('.card-content'));
-                }
-                
-                // 清空卡片内容
-                card.innerHTML = '';
-                
-                // 将新的a标签添加到卡片中
-                card.appendChild(newA);
-            }
-        });
-    }
-    
     // 搜索功能
+    const searchCount = document.getElementById('search-count');
+    
     function performSearch() {
         const searchTerm = searchInput.value.toLowerCase();
-        let foundResults = false;
+        let visibleCards = 0;
+        
+        // 如果搜索框为空，显示所有卡片和部分
+        if (searchTerm === '') {
+            cards.forEach(card => {
+                card.style.display = '';
+            });
+            sections.forEach(section => {
+                section.style.display = '';
+            });
+            searchCount.style.display = 'none';
+            // 更新URL，移除search参数
+            const url = new URL(window.location);
+            url.searchParams.delete('search');
+            window.history.pushState({}, '', url);
+            return;
+        }
+        
+        // 隐藏所有部分，稍后根据包含匹配卡片的部分显示
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
         
         cards.forEach(card => {
             const title = card.querySelector('h3').textContent.toLowerCase();
             const desc = card.querySelector('p').textContent.toLowerCase();
             
             if (title.includes(searchTerm) || desc.includes(searchTerm)) {
-                card.style.display = 'block';
-                foundResults = true;
+                card.style.display = '';
+                card.closest('.section').style.display = '';
+                visibleCards++;
             } else {
                 card.style.display = 'none';
             }
         });
         
-        // 更新URL以反映搜索状态
-        if (searchTerm.length > 0) {
-            const newUrl = new URL(window.location);
-            newUrl.searchParams.set('search', searchTerm);
-            window.history.pushState({}, '', newUrl);
-        } else {
-            const newUrl = new URL(window.location);
-            newUrl.searchParams.delete('search');
-            window.history.pushState({}, '', newUrl);
-        }
+        // 显示搜索结果计数
+        searchCount.textContent = `找到 ${visibleCards} 个结果 | Found ${visibleCards} results`;
+        searchCount.style.display = 'block';
         
-        // 显示搜索结果数量
-        updateSearchResultsCount(foundResults);
+        // 更新URL，添加search参数
+        const url = new URL(window.location);
+        url.searchParams.set('search', searchTerm);
+        window.history.pushState({}, '', url);
     }
     
-    function updateSearchResultsCount(foundResults) {
-        // 获取所有可见卡片的数量
-        const visibleCards = document.querySelectorAll('.card[style="display: block;"]');
-        const count = visibleCards.length;
-        
-        // 更新结果计数或显示无结果消息
-        const countElem = document.getElementById('search-count');
-        if (countElem) {
-            if (foundResults) {
-                countElem.textContent = `找到 ${count} 个结果 | Found ${count} results`;
-                countElem.style.display = 'block';
-            } else {
-                countElem.textContent = '未找到结果 | No results found';
-                countElem.style.display = 'block';
-            }
-        }
-    }
-    
-    // 检查URL中是否有搜索参数
-    function checkUrlForSearch() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const searchParam = urlParams.get('search');
-        
-        if (searchParam) {
-            searchInput.value = searchParam;
-            performSearch();
-        }
-    }
-    
-    // 添加事件监听器
     searchBtn.addEventListener('click', performSearch);
     searchInput.addEventListener('keyup', function(e) {
         if (e.key === 'Enter') {
@@ -135,41 +90,141 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // 页面加载时检查URL
-    checkUrlForSearch();
-
+    // 检查URL中是否有搜索参数
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchParam = urlParams.get('search');
+    if (searchParam) {
+        searchInput.value = searchParam;
+        performSearch();
+    }
+    
     // 平滑滚动
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80, // 减去头部固定高度
-                    behavior: 'smooth'
-                });
+            const targetId = this.getAttribute('href').substring(1);
+            if (targetId) {
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // 更新面包屑导航
+                    updateBreadcrumb(targetId);
+                }
             }
         });
     });
-
-    // 添加滚动检测，在滚动一定距离后改变头部样式
+    
+    // 滚动时改变头部样式
     const header = document.querySelector('header');
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
+        
+        // 更新面包屑导航
+        updateBreadcrumbOnScroll();
     });
-
-    // 初始加载页面时显示动画效果
-    setTimeout(function() {
-        document.querySelectorAll('.card').forEach((card, index) => {
-            setTimeout(() => {
-                card.classList.add('appear');
-            }, 50 * index);
+    
+    // 卡片初始动画效果
+    const allCards = document.querySelectorAll('.card');
+    allCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.05}s`;
+        card.classList.add('fade-in');
+    });
+    
+    // 修复卡片结构，确保整个卡片可点击
+    function fixCardStructure() {
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            const link = card.querySelector('a');
+            const title = card.querySelector('h3');
+            
+            // 如果标题不在链接内，则将其移入链接
+            if (link && title && !link.contains(title)) {
+                // 创建新的链接元素，保留原链接的属性
+                const newLink = document.createElement('a');
+                newLink.href = link.href;
+                newLink.target = link.target;
+                
+                // 将标题移入新链接
+                newLink.appendChild(title.cloneNode(true));
+                
+                // 将原链接的内容移入新链接
+                while (link.firstChild) {
+                    newLink.appendChild(link.firstChild);
+                }
+                
+                // 替换原链接和标题
+                card.replaceChild(newLink, title);
+                if (link.parentNode) {
+                    link.parentNode.removeChild(link);
+                }
+            }
         });
-    }, 300);
+    }
+    
+    // 执行卡片结构修复
+    fixCardStructure();
+    
+    // 面包屑导航功能
+    const breadcrumbNav = document.getElementById('breadcrumb-nav');
+    
+    // 根据点击的链接更新面包屑
+    function updateBreadcrumb(sectionId) {
+        // 清除除了首页以外的所有面包屑
+        while (breadcrumbNav.children.length > 1) {
+            breadcrumbNav.removeChild(breadcrumbNav.lastChild);
+        }
+        
+        if (sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const sectionTitle = section.querySelector('h2').textContent.split('|')[0].trim();
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = `#${sectionId}`;
+                a.textContent = sectionTitle;
+                a.classList.add('active');
+                li.appendChild(a);
+                breadcrumbNav.appendChild(li);
+            }
+        }
+    }
+    
+    // 根据滚动位置更新面包屑
+    function updateBreadcrumbOnScroll() {
+        const sections = document.querySelectorAll('.section');
+        let currentSection = null;
+        
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            // 如果部分顶部在视口中或刚刚超过视口顶部
+            if (rect.top <= 150 && rect.bottom > 0) {
+                currentSection = section;
+            }
+        });
+        
+        if (currentSection) {
+            updateBreadcrumb(currentSection.id);
+        }
+    }
+    
+    // 返回顶部功能
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+    
+    // 初始化面包屑
+    updateBreadcrumbOnScroll();
 }); 

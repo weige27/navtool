@@ -257,37 +257,100 @@ header h1 span {
 
 /* Footer Styles */
 footer {
-    background-color: var(--dark-color);
-    color: white;
-    padding: 30px 0;
-    margin-top: 40px;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 40px 0 20px;
+    margin-top: 50px;
+    border-top: 1px solid var(--border-color);
 }
 
-footer .container {
+.footer-content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
-footer p {
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    position: relative;
+}
+
+.footer-col h4:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.footer-col p {
+    margin-bottom: 10px;
     font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
 }
 
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+    color: var(--accent-color);
+}
+
 .social-links {
+    display: flex;
+    gap: 15px;
     margin-top: 15px;
 }
 
 .social-links a {
-    color: white;
-    margin-left: 15px;
-    font-size: 20px;
-    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    transition: all 0.3s;
 }
 
 .social-links a:hover {
-    color: var(--secondary-color);
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
 }
 
 /* Language Translation Styles */
@@ -357,17 +420,12 @@ body.en-mode .en {
         grid-template-columns: 1fr;
     }
     
-    footer .container {
+    .footer-content {
         flex-direction: column;
-        text-align: center;
     }
     
-    .social-links {
-        margin-top: 15px;
-    }
-    
-    .social-links a {
-        margin: 0 8px;
+    .footer-col {
+        margin-bottom: 30px;
     }
 }
 
@@ -387,4 +445,46 @@ body.en-mode .en {
         position: static;
         margin-top: 10px;
     }
+}
+
+/* 面包屑导航样式 */
+.breadcrumb-container {
+    background-color: var(--bg-secondary);
+    padding: 8px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.breadcrumb {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumb li {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.breadcrumb li:not(:last-child):after {
+    content: "/";
+    margin-left: 8px;
+    color: var(--text-secondary);
+}
+
+.breadcrumb a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: var(--accent-color);
+}
+
+.breadcrumb .active {
+    color: var(--accent-color);
 } 

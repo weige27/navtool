@@ -6,20 +6,22 @@
     <title>NavTool - 开发者工具导航 | Developer Tools Navigation</title>
     <meta name="description" content="NavTool提供精选AI开发工具、SEO资源、数据分析和开发模板，为开发者提供一站式导航服务 | Curated developer tools, AI resources and templates for coders">
     <meta name="keywords" content="AI工具, 开发者导航, SEO工具, 开发模版, 网站资源, AI tools, developer navigation, SEO tools, development templates">
+    <meta name="author" content="NavTool.cc">
+    <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://navtool.cc/">
     <meta property="og:title" content="NavTool - 开发者工具导航">
     <meta property="og:description" content="NavTool提供精选AI开发工具、SEO资源、数据分析和开发模板，为开发者提供一站式导航服务">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=NavTool">
+    <meta property="og:image" content="https://navtool.cc/img/navtool-og.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://navtool.cc/">
     <meta property="twitter:title" content="NavTool - 开发者工具导航">
     <meta property="twitter:description" content="NavTool提供精选AI开发工具、SEO资源、数据分析和开发模板，为开发者提供一站式导航服务">
-    <meta property="twitter:image" content="https://via.placeholder.com/1200x630?text=NavTool">
+    <meta property="twitter:image" content="https://navtool.cc/img/navtool-og.png">
     
     <link rel="stylesheet" href="style.css">
     <!-- 网站图标 -->
@@ -29,6 +31,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- 规范链接 -->
     <link rel="canonical" href="https://navtool.cc/" />
+    <!-- 网站地图引用 -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="NavTool RSS Feed" href="/feed.xml" />
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R8Y819ZXPM"></script>
     <script>
@@ -49,6 +55,20 @@
         "@type": "SearchAction",
         "target": "https://navtool.cc/?search={search_term_string}",
         "query-input": "required name=search_term_string"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "NavTool",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://navtool.cc/img/navtool-logo.png"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
       }
     }
     </script>
@@ -68,6 +88,14 @@
             </div>
         </div>
     </header>
+
+    <nav class="breadcrumb-container">
+        <div class="container">
+            <ol class="breadcrumb" id="breadcrumb-nav">
+                <li><a href="#"><i class="fas fa-home"></i> 首页</a></li>
+            </ol>
+        </div>
+    </nav>
 
     <main class="container">
         <!-- 需求收集和关键词调研部分 -->
@@ -1283,11 +1311,31 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 NavTool.cc - 精选优质AI与开发工具 | Curated AI and Development Tools</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-weixin"></i></a>
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于 | About</h4>
+                    <p>NavTool为开发者提供精选工具导航，助力更高效的开发和创业</p>
+                    <p>NavTool provides curated tools for developers to boost productivity</p>
+                </div>
+                <div class="footer-col">
+                    <h4>链接 | Links</h4>
+                    <ul>
+                        <li><a href="/feed.xml" target="_blank"><i class="fas fa-rss"></i> RSS订阅</a></li>
+                        <li><a href="/sitemap.xml" target="_blank"><i class="fas fa-sitemap"></i> 网站地图</a></li>
+                        <li><a href="#" id="back-to-top"><i class="fas fa-arrow-up"></i> 返回顶部</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>社交媒体 | Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" aria-label="WeChat"><i class="fab fa-weixin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 NavTool.cc - 精选优质AI与开发工具 | Curated AI and Development Tools</p>
             </div>
         </div>
     </footer>

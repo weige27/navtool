@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NavTool - 开发者工具导航</title>
+    <description>NavTool提供精选AI开发工具、SEO资源、数据分析和开发模板，为开发者提供一站式导航服务</description>
+    <link>https://navtool.cc/</link>
+    <atom:link href="https://navtool.cc/feed.xml" rel="self" type="application/rss+xml" />
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 01 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <generator>NavTool</generator>
+    
+    <item>
+      <title>网站上线 - NavTool正式发布</title>
+      <description>NavTool开发者工具导航网站正式上线，提供精选AI开发工具、SEO资源、数据分析和开发模板。</description>
+      <pubDate>Mon, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <link>https://navtool.cc/</link>
+      <guid>https://navtool.cc/#news</guid>
+    </item>
+    
+    <item>
+      <title>善用黑科技工具板块更新</title>
+      <description>新增多款AI开发工具，包括Claude 3.7 Sonnet, GitHub Copilot和V0.dev等，助力开发者提升效率。</description>
+      <pubDate>Sun, 28 Feb 2025 00:00:00 +0000</pubDate>
+      <link>https://navtool.cc/#ai-dev-tools</link>
+      <guid>https://navtool.cc/#ai-dev-tools</guid>
+    </item>
+    
+    <item>
+      <title>网站模板资源更新</title>
+      <description>上线多款新的网站模板资源，包括Next.js, Astro和SaaS模板，满足不同开发需求。</description>
+      <pubDate>Fri, 26 Feb 2025 00:00:00 +0000</pubDate>
+      <link>https://navtool.cc/#website-templates</link>
+      <guid>https://navtool.cc/#website-templates</guid>
+    </item>
+  </channel>
+</rss> 
