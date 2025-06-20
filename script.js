@@ -225,6 +225,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // 微信弹窗功能
+    const wechatLink = document.getElementById('wechat-link');
+    const wechatModal = document.getElementById('wechat-modal');
+    const closeModal = document.querySelector('.close-modal');
+    
+    if (wechatLink && wechatModal) {
+        wechatLink.addEventListener('click', function() {
+            wechatModal.style.display = 'block';
+        });
+        
+        closeModal.addEventListener('click', function() {
+            wechatModal.style.display = 'none';
+        });
+        
+        // 点击弹窗外区域关闭弹窗
+        window.addEventListener('click', function(event) {
+            if (event.target === wechatModal) {
+                wechatModal.style.display = 'none';
+            }
+        });
+    }
+    
     // 初始化面包屑
     updateBreadcrumbOnScroll();
 }); 
