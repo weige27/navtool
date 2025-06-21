@@ -1,0 +1,4 @@
+# 为所有XML文件设置正确的内容类型
+/*.xml
+  Content-Type: application/xml; charset=utf-8
+  Access-Control-Allow-Origin: * 

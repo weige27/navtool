@@ -1,0 +1,3 @@
+# 确保没有重定向干扰网站地图访问
+# 示例重定向（如果需要）
+# /old-sitemap.xml /sitemap.xml 301 
