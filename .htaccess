@@ -1,0 +1,26 @@
+# 设置XML文件的MIME类型
+AddType application/xml .xml
+
+# 启用CORS
+<IfModule mod_headers.c>
+    <FilesMatch "\.(xml)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
+
+# 启用压缩
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml
+</IfModule>
+
+# 缓存控制
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType application/xml "access plus 1 day"
+</IfModule>
+
+# 确保sitemap.xml和robots.txt可以被访问
+<Files ~ "(sitemap\.xml|robots\.txt|simple-sitemap\.xml|basic-sitemap\.xml)$">
+    Order allow,deny
+    Allow from all
+</Files> 

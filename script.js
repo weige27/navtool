@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
         searchInput.value = searchParam;
         performSearch();
     }
-    
+
     // 平滑滚动
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -105,17 +105,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetId = this.getAttribute('href').substring(1);
             if (targetId) {
                 const targetElement = document.getElementById(targetId);
-                if (targetElement) {
+            if (targetElement) {
                     targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    behavior: 'smooth'
+                });
                     // 更新面包屑导航
                     updateBreadcrumb(targetId);
                 }
             }
         });
     });
-    
+
     // 滚动时改变头部样式
     const header = document.querySelector('header');
     window.addEventListener('scroll', function() {
