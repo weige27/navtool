@@ -20,4 +20,9 @@
   for = "/basic-sitemap.xml"
   [headers.values]
     Content-Type = "application/xml; charset=utf-8"
-    X-Robots-Tag = "noindex" 
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/sitemap-index.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8" 
