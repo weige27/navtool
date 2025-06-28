@@ -1,8 +1,9 @@
 /sitemap.xml
   Content-Type: application/xml
+
 /robots.txt
   Content-Type: text/plain
-/public/sitemap.xml
-  Content-Type: application/xml
-/public/robots.txt
-  Content-Type: text/plain
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
