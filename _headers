@@ -1,4 +1,8 @@
-# 为所有XML文件设置正确的内容类型
-/*.xml
-  Content-Type: application/xml; charset=utf-8
-  Access-Control-Allow-Origin: * 
+/sitemap.xml
+  Content-Type: application/xml
+/robots.txt
+  Content-Type: text/plain
+/public/sitemap.xml
+  Content-Type: application/xml
+/public/robots.txt
+  Content-Type: text/plain

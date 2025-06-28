@@ -1,15 +1,16 @@
-https://navtool.cc/
-https://navtool.cc/#keyword-research
-https://navtool.cc/#domain-tools
-https://navtool.cc/#ai-dev-tools
-https://navtool.cc/#competitor-research
-https://navtool.cc/#website-templates
-https://navtool.cc/#navigation-templates
-https://navtool.cc/#keyword-tools
-https://navtool.cc/#google-tools
-https://navtool.cc/#monetization-tools
-https://navtool.cc/#donation-tools
-https://navtool.cc/#payment-tools
-https://navtool.cc/#analytics-tools
-https://navtool.cc/#news
-https://navtool.cc/#finance-posts 
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://navtool.cc/</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- 添加您网站的其他URL，例如： -->
+  <url>
+    <loc>https://navtool.cc/overview</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
