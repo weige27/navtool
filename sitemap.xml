@@ -2,14 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://navtool.cc/</loc>
-    <lastmod>2025-06-21</lastmod>
+    <lastmod>2025-06-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- 添加您网站的其他URL，例如： -->
   <url>
     <loc>https://navtool.cc/overview</loc>
-    <lastmod>2025-06-21</lastmod>
+    <lastmod>2025-06-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

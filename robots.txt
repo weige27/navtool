@@ -1,6 +1,22 @@
 User-agent: *
 Allow: /
+
+# 禁止抓取特定文件
+User-agent: *
+Disallow: /js/data.js
+Disallow: /js/main.js
+Disallow: /*.json$
+Disallow: /_headers
+
+# 允许主要搜索引擎完全抓取
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# 只保留一个主要的sitemap条目
 Sitemap: https://navtool.cc/sitemap.xml
-Sitemap: https://navtool.cc/simple-sitemap.xml
-Sitemap: https://navtool.cc/sitemap-index.xml
-Sitemap: https://navtool.cc/sitemap.txt 
