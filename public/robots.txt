@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://navtool.cc/sitemap.xml
+Sitemap: https://navtool.cc/sitemap.xml
